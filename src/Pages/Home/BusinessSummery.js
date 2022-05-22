@@ -15,7 +15,7 @@ const BusinessSummery = () => {
                     </div>
                     <div>
                         <div class="stat-value">70+</div>
-                        <div class="stat-value">Countries</div>
+                        <div class=" font-bold text-2xl">Countries</div>
                     </div>
                 </div>
 
@@ -25,7 +25,7 @@ const BusinessSummery = () => {
                     </div>
                     <div>
                         <div class="stat-value">2.8M</div>
-                        <div class="stat-value">Happy Clients</div>
+                        <div class="font-bold text-2xl">Happy Clients</div>
                     </div>
                 </div>
 
@@ -35,7 +35,7 @@ const BusinessSummery = () => {
                     </div>
                     <div>
                         <div class="stat-value">5800+</div>
-                        <div class="stat-value">Feedbacks</div>
+                        <div class="font-bold text-2xl">Feedbacks</div>
                     </div>
                 </div>
 
