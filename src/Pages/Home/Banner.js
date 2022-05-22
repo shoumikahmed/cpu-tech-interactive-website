@@ -3,7 +3,7 @@ import banner from '../../assets/images/banner.jpg'
 
 const Banner = () => {
     return (
-        <div class="hero min-h-screen">
+        <div class="hero min-h-screen w-full">
             <div class="hero-content flex-col lg:flex-row-reverse ">
                 <img src={banner} class="max-w-sm rounded-lg shadow-2xl object-cover" />
                 <div>

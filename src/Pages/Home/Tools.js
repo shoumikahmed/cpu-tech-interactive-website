@@ -11,7 +11,7 @@ const Tools = () => {
     }, [])
 
     return (
-        <div className='my-28 px-6'>
+        <div className='my-28'>
             <div className='text-center '>
                 <h1 className='text-primary text-xl font-bold uppercase'>Our Products</h1>
                 <h2 className='text-4xl mt-10'>Tools We Manufacture</h2>
