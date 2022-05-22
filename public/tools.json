@@ -1,0 +1,56 @@
+[
+    {
+        "name": "Honda",
+        "_id": 1,
+        "price": "$50",
+        "description": "Honda is the world's largest manufacturer of two Wheelers, Recognized the world over as the symbol of Honda two wheelers, the 'Wings' arrived in Bangladesh.",
+        "minimumquantity": "70k",
+        "availablequantity": "70k",
+        "img": "https://images.hindustantimes.com/auto/auto-images/bikes/honda/hondacb350rs/1630601298458_hondacb350rs-1"
+    },
+    {
+        "name": "Ducati",
+        "_id": 2,
+        "price": "$67,000",
+        "description": "All information about our different models of bikes, the racing in MotoGP and Superbike, and dealers. Visit Ducati official website.",
+        "quantity": "50",
+        "suppliername": "Tom cruise",
+        "img": "https://images.hindustantimes.com/auto/auto-images/bikes/ducati/ducatihypermotard950/1630603601539_ducatihypermotard950-1"
+    },
+    {
+        "name": "Kawasaki",
+        "_id": 3,
+        "price": "$78,800",
+        "description": "Official website of Kawasaki Motors Corp., U.S.A., distributor of powersports vehicles including motorcycles, ATVs, Side x Sides and Jet Ski watercraft.",
+        "quantity": "70",
+        "suppliername": "Will Smith",
+        "img": "https://www.drivespark.com/images/2022-02/2022-kawasaki-z650rs-50th-anniversary-2.jpg"
+    },
+    {
+        "name": "Suzuki",
+        "_id": 4,
+        "price": "$78,000",
+        "description": "Welcome to the Suzuki Bangladesh | RANCON MOTORBIKES LTD. official website. Get your Suzuki Motorbike from our range of brand new motorbikes.",
+        "quantity": "88",
+        "suppliername": "Tony Stark",
+        "img": "https://static1.hotcarsimages.com/wordpress/wp-content/uploads/2020/06/2019-Suzuki-SV650-via-Bennetts-Insurance.jpeg?q=50&fit=crop&w=740&dpr=1.5"
+    },
+    {
+        "name": "Yamaha",
+        "_id": 5,
+        "price": "$95,999",
+        "description": "Yamaha motorcycle price, full specs and reviews in Bangladesh 2022. Yamaha bikes prices, news, all new models, showrooms in Bangladesh.",
+        "quantity": "96",
+        "suppliername": "Ottis Gibson",
+        "img": "https://kickstart.bikeexif.com/wp-content/uploads/2022/03/yamaha-1979-xs650.jpg"
+    },
+    {
+        "name": "BMW",
+        "_id": 6,
+        "price": "$115,500",
+        "description": "BMW Bike (Motorcycle) Price List, Top Model Bikes Overview in India. Find here BMW bike top models, prices, etc. & Buy Roadster, Naked bikes.",
+        "quantity": "40",
+        "suppliername": "Shakib Al Hasan",
+        "img": "https://mediapool.bmwgroup.com/cache/P9/202003/P90386406/P90386406-the-bmw-r-18-first-edition-04-2020-600px.jpg"
+    }
+]
