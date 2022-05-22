@@ -18,7 +18,7 @@ const MyPortfolio = () => {
                     <strong className='text-purple-500'>Technology Skills: Web Developer.</strong>
                 </p>
                 <div className='text-center mb-10 font-bold text-2xl'>
-                    <marquee behavior="slide" direction="left"><h1 className='text-purple-500'>Here is my 3 best website by coding</h1></marquee>
+                    <marquee><h1 className='text-purple-500'>Here is my 3 best website by coding which are in these buttons!!!</h1></marquee>
                 </div>
                 <div class="card-actions justify-center">
                     <a href="https://sa-photography-assignment10.web.app/"><button class="btn btn-primary">SA Photography</button></a>
