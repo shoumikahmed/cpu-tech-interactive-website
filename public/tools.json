@@ -31,26 +31,26 @@
         "_id": 4,
         "price": "$30",
         "description": "he RGB LED Controller together with Cooler Master software allows you to take full control of your rig's lighting and take it to the next level.",
-        "minimumquantity": "8k",
-        "availablequantity": "65k",
+        "minimumquantity": "12k",
+        "availablequantity": "75k",
         "img": "https://igadget.com.bd/wp-content/uploads/2021/08/lian-li-galahad-240mm-white-price-in-bd-500x500-1.jpg"
     },
     {
-        "name": "Yamaha",
+        "name": "Power Supply",
         "_id": 5,
-        "price": "$95,999",
-        "description": "Yamaha motorcycle price, full specs and reviews in Bangladesh 2022. Yamaha bikes prices, news, all new models, showrooms in Bangladesh.",
-        "quantity": "96",
-        "suppliername": "Ottis Gibson",
-        "img": "https://kickstart.bikeexif.com/wp-content/uploads/2022/03/yamaha-1979-xs650.jpg"
+        "price": "$40",
+        "description": "The power supply unit or PSU for PC converts AC to low-voltage regulated DC power for the internal components of a computer. ",
+        "minimumquantity": "9k",
+        "availablequantity": "85k",
+        "img": "https://www.startech.com.bd/image/cache/catalog/power-supply/corsair/rm750/rm750-500x500.jpg"
     },
     {
-        "name": "BMW",
+        "name": "CPU Casing",
         "_id": 6,
-        "price": "$115,500",
-        "description": "BMW Bike (Motorcycle) Price List, Top Model Bikes Overview in India. Find here BMW bike top models, prices, etc. & Buy Roadster, Naked bikes.",
-        "quantity": "40",
-        "suppliername": "Shakib Al Hasan",
-        "img": "https://mediapool.bmwgroup.com/cache/P9/202003/P90386406/P90386406-the-bmw-r-18-first-edition-04-2020-600px.jpg"
+        "price": "$60",
+        "description": "In the modern era, the casing is a very important element of desktop PC that is often known as case, chassis, tower, system unit, cabinet,, or base unit.",
+        "minimumquantity": "7k",
+        "availablequantity": "80k",
+        "img": "https://image.made-in-china.com/2f0j00WzuRpFSEqlgP/Hot-Computer-Cases-Gamer-Towers-ATX-CPU-Casing-PC-Case.jpg"
     }
 ]
