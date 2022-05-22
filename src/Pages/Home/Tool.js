@@ -2,7 +2,7 @@ import React from 'react';
 
 const Tool = ({ tool }) => {
     return (
-        <div className="card lg:max-w-lg bg-base-100 shadow-xl mt-20">
+        <div className="card lg:max-w-lg bg-base-100 shadow-xl mt-20 hover:shadow-2xl">
             <figure className="px-10 pt-10">
                 <img src={tool?.img} alt="" />
             </figure>
