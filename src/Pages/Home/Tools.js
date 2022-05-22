@@ -13,14 +13,14 @@ const Tools = () => {
     return (
         <div className='my-28'>
             <div className='text-center '>
-                <h1 className='text-primary text-xl font-bold uppercase'>Our Services</h1>
-                <h2 className='text-4xl'>Services We Provide</h2>
+                <h1 className='text-primary text-xl font-bold uppercase'>Our Tools or Products</h1>
+                <h2 className='text-4xl'>Services We Manufacture</h2>
             </div>
             <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10'>
                 {
-                    tools.map(service => <Tool
-                        key={service._id}
-                        service={service}
+                    tools.map(tool => <Tool
+                        key={tool._id}
+                        tool={tool}
                     ></Tool>)
                 }
             </div>
