@@ -6,12 +6,12 @@ import Tools from './Tools';
 
 const Home = () => {
     return (
-        <div>
+        <section>
             <Banner></Banner>
             <Tools></Tools>
-            <Rating></Rating>
             <Carousel></Carousel>
-        </div>
+            <Rating></Rating>
+        </section>
     );
 };
 
