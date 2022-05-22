@@ -1,39 +1,39 @@
 [
     {
-        "name": "Honda",
+        "name": "SSD",
         "_id": 1,
         "price": "$50",
-        "description": "Honda is the world's largest manufacturer of two Wheelers, Recognized the world over as the symbol of Honda two wheelers, the 'Wings' arrived in Bangladesh.",
-        "minimumquantity": "70k",
+        "description": "SSDs are in theory just like a Hard disc drive. But they are made with stacked NAND cells. These cells are used in Smaller Chips like memory cards. ",
+        "minimumquantity": "10k",
         "availablequantity": "70k",
-        "img": "https://images.hindustantimes.com/auto/auto-images/bikes/honda/hondacb350rs/1630601298458_hondacb350rs-1"
+        "img": "https://static6.depositphotos.com/1000128/541/i/600/depositphotos_5418702-stock-photo-128gb-solid-state-drive-ssd.jpg"
     },
     {
-        "name": "Ducati",
+        "name": "HDD",
         "_id": 2,
-        "price": "$67,000",
-        "description": "All information about our different models of bikes, the racing in MotoGP and Superbike, and dealers. Visit Ducati official website.",
-        "quantity": "50",
-        "suppliername": "Tom cruise",
-        "img": "https://images.hindustantimes.com/auto/auto-images/bikes/ducati/ducatihypermotard950/1630603601539_ducatihypermotard950-1"
+        "price": "$42",
+        "description": "A computer hard disk drive (HDD) is a non-volatile data storage device. Non-volatile refers to storage devices that maintain stored data when turned off.",
+        "minimumquantity": "15k",
+        "availablequantity": "80k",
+        "img": "https://images.unsplash.com/photo-1601737487795-dab272f52420?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aGFyZGRpc2t8ZW58MHx8MHx8&w=1000&q=80"
     },
     {
-        "name": "Kawasaki",
+        "name": "RAM",
         "_id": 3,
-        "price": "$78,800",
-        "description": "Official website of Kawasaki Motors Corp., U.S.A., distributor of powersports vehicles including motorcycles, ATVs, Side x Sides and Jet Ski watercraft.",
-        "quantity": "70",
-        "suppliername": "Will Smith",
-        "img": "https://www.drivespark.com/images/2022-02/2022-kawasaki-z650rs-50th-anniversary-2.jpg"
+        "price": "$55",
+        "description": "Random-access memory is a form of computer memory that can be read and changed in any order, typically used to store working data and machine code.",
+        "minimumquantity": "8k",
+        "availablequantity": "65k",
+        "img": "https://pricemama.com.bd/wp-content/uploads/2019/07/gskill-trident-z-rgb-8gb-ddr4-3200mhz-black-heatsink-gaming-desktop-ram.jpg"
     },
     {
-        "name": "Suzuki",
+        "name": "RGB Cooler",
         "_id": 4,
-        "price": "$78,000",
-        "description": "Welcome to the Suzuki Bangladesh | RANCON MOTORBIKES LTD. official website. Get your Suzuki Motorbike from our range of brand new motorbikes.",
-        "quantity": "88",
-        "suppliername": "Tony Stark",
-        "img": "https://static1.hotcarsimages.com/wordpress/wp-content/uploads/2020/06/2019-Suzuki-SV650-via-Bennetts-Insurance.jpeg?q=50&fit=crop&w=740&dpr=1.5"
+        "price": "$30",
+        "description": "he RGB LED Controller together with Cooler Master software allows you to take full control of your rig's lighting and take it to the next level.",
+        "minimumquantity": "8k",
+        "availablequantity": "65k",
+        "img": "https://igadget.com.bd/wp-content/uploads/2021/08/lian-li-galahad-240mm-white-price-in-bd-500x500-1.jpg"
     },
     {
         "name": "Yamaha",
