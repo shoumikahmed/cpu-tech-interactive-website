@@ -23,15 +23,19 @@ const Blogs = () => {
                     </p>
 
                     <p class='mt-10 mb-3 font-semibold text-gray-900'>
-                        HTML: A good basis for accessibility?
+                        What are the different ways to manage a state in a React application?
                     </p>
                     <p class='text-gray-600'>
-                        A great deal of web content can be made accessible just by making
-                        sure the correct HTML elements are always used for the correct
-                        purpose.
+                        The different ways to manage state in a react application are:
+                        <ul>
+                            <li>1. Local state - Local state is data we manage in one or another component.</li>
+                            <li>2. Global state - Global state is data we manage across multiple components.</li>
+                            <li>3. Server state - Data that comes from an external server that must be integrated with our UI state.</li>
+                            <li>4. URL state - Data that exists on our URLs, including the pathname and query parameters.</li>
+                        </ul>
                     </p>
                     <p class='mt-10 mb-3 font-semibold text-gray-900'>
-                        CSS and JavaScript accessibility best practices?
+                        How does prototypical inheritance work?
                     </p>
                     <p class='text-gray-600'>
                         CSS and JavaScript, when used properly, also have the potential to
