@@ -1,70 +1,45 @@
-# Getting Started with Create React App
+# Cpu Tech
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[Live link] ()
 
-## Available Scripts
+# Bullet Point
 
-In the project directory, you can run:
+***
+My project name is Cpu Tech.Cpu tech is a computer accessories making company. The customers who are interested to buy cpu accessories for wholesale they can buy all cpu acccessories from our company which are made by our company.
 
-### `npm start`
+#### Some information of my website:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Table of Contents
+1. [General Info](#general-info)
+2. [Technologies](#technologies)
+3. [Installation](#installation)
+4. [Collaboration](#collaboration)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Technologies
+***
+A list of technologies used within the project:
+* [React-tailwindcss](https://tailwindcss.com/): Version 3.0.24
+* [Daisyui](https://daisyui.com/): Version 2.15.0
+* [React Toastify](https://github.com/fkhadra/react-toastify): Version 9.0.1
+* [React Router](https://reactrouter.com/): Version 6.3.0
+* [React Firebase Hook](https://github.com/CSFrequency/react-firebase-hooks): Version 5.0.3
+* [React](https://reactjs.org/): Version 17
 
-### `npm test`
+## Installation
+***
+A little intro about the installation. 
+```
+$ npx create-react-app cpu-manufacturer-assignment11
+$ cd ../project/cpu-manufacturer-assignment11
+$ npm install
+$ npm start
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Collaboration
+***
+My website name is Cpu Tech.
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Fist i create a react app and i open my project file with VS Code.Then i install Tailwind CSS Version 3.0.24 Then i started to design my cpu manufacture website.
+> In public folder of react app i create a file of tools.json.Then i make fake data for load data in my website project.Then i create a pages folder in src folder for using common some component.And then i fetch data for loading data in my website.
+> I used common sociallogin in login page and singup page.In homepage i add a background image for creating a banner.And i fetched tools.json file for showing all the data to load.Then i install some react framework and library.Then i create blogs component which is containing 5 question's answer.Then i responsive my website.
+> This is how i do it.And i create a responsive website.

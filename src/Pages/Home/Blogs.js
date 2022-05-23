@@ -17,8 +17,8 @@ const Blogs = () => {
                             <li>1. Using React.Fragment to Avoid Adding Extra Nodes to the DOM.</li>
                             <li>2. By Ignoring Anonymous Functions.</li>
                             <li>3. Use A Production Build Before Deployment.</li>
-                            <li>4. By Mounting And Unmounting Components</li>
-                            <li>5. Using React.memo for Component Memoization</li>
+                            <li>4. By Mounting And Unmounting Components.</li>
+                            <li>5. Using React.memo for Component Memoization.</li>
                         </ul>
                     </p>
 
