@@ -3,6 +3,7 @@ import Banner from './Banner';
 import BusinessSummery from './BusinessSummery';
 import Carousel from './Carousel';
 import Rating from './Rating';
+import Reviews from './Reviews';
 import Tools from './Tools';
 
 const Home = () => {
@@ -13,6 +14,7 @@ const Home = () => {
             <BusinessSummery></BusinessSummery>
             <Carousel></Carousel>
             <Rating></Rating>
+            <Reviews></Reviews>
         </section>
     );
 };

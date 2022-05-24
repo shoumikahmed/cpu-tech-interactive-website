@@ -1,18 +1,52 @@
 import React from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { toast, ToastContainer } from 'react-toastify';
+import auth from '../../firebase.init';
 
 const AddReview = () => {
+
+    const [user] = useAuthState(auth)
+    const addReview = e => {
+        e.preventDefault()
+        const review = {
+            email: user?.email,
+            name: e.target.name.value,
+            city: e.target.city.value,
+            ratings: e.target.ratings.value,
+            review: e.target.review.value,
+        }
+
+        const url = ``
+        fetch(url, {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(review)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                toast('Review added Successfully')
+                e.target.reset()
+            })
+    }
+
+
     return (
-        <div className='flex justify-center items-center mt-32'>
+        <div className='flex justify-center items-center mt-12'>
             <div className="card w-96 bg-base-100 shadow-xl">
                 <div className="card-body">
                     <h2 className="text-center text-2xl font-bold">Add Review</h2>
 
-                    <form>
+                    <form onSubmit={addReview}>
                         <div className="form-control w-full max-w-xs">
                             <label className="label">
                                 <span className="label-text">Name</span>
                             </label>
                             <input
+                                name="name"
+                                id="name"
                                 type="text"
                                 placeholder="Your Name"
                                 className="input input-bordered w-full max-w-xs"
@@ -24,6 +58,8 @@ const AddReview = () => {
                                 <span className="label-text">City</span>
                             </label>
                             <input
+                                name="city"
+                                id="city"
                                 type="text"
                                 placeholder="City/District"
                                 className="input input-bordered w-full max-w-xs"
@@ -32,14 +68,34 @@ const AddReview = () => {
                         </div>
                         <div className="form-control w-full max-w-xs">
                             <label className="label">
+                                <span className="label-text">Ratings</span>
+                            </label>
+                            <input
+                                name="ratings"
+                                id="ratings"
+                                type="number"
+                                placeholder="Ratings"
+                                className="input input-bordered w-full max-w-xs"
+                            />
+
+                        </div>
+                        <div className="form-control w-full max-w-xs">
+                            <label className="label">
                                 <span className="label-text">Review</span>
                             </label>
-                            <textarea class="textarea textarea-bordered" placeholder="Review"></textarea>
+                            <textarea
+                                name="review"
+                                id="review"
+                                class="textarea textarea-bordered"
+                                placeholder="Review"
+                            ></textarea>
 
                         </div>
                         <input className='btn w-full max-w-xs mt-5' type="submit" value="Add Review" />
                     </form>
                 </div>
+
+                <ToastContainer></ToastContainer>
             </div>
         </div>
     );
