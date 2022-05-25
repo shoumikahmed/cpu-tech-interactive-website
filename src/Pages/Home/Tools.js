@@ -1,14 +1,23 @@
 import React, { useEffect, useState } from 'react';
+import { useQuery } from 'react-query';
+import Loading from '../Shared/Loading';
 import Tool from './Tool';
 
 const Tools = () => {
-    const [tools, setTools] = useState([])
+    // const [tools, setTools] = useState([])
 
-    useEffect(() => {
-        fetch('tools.json')
-            .then(res => res.json())
-            .then(data => setTools(data))
-    }, [])
+    const { data: tools, isLoading, refetch } = useQuery(['available',], () => fetch(`http://localhost:5000/tool`)
+        .then(res => res.json()))
+
+    if (isLoading) {
+        return <Loading></Loading>
+    }
+
+    // useEffect(() => {
+    //     fetch('http://localhost:5000/tool')
+    //         .then(res => res.json())
+    //         .then(data => setTools(data))
+    // }, [])
 
     return (
         <div className='my-28'>

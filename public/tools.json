@@ -1,56 +1,56 @@
 [
     {
-        "name": "SSD",
         "_id": 1,
+        "name": "SSD",
         "price": "$50",
         "description": "SSDs are in theory just like a Hard disc drive. But they are made with stacked NAND cells. These cells are used in Smaller Chips like memory cards. ",
-        "minimumquantity": "10k",
-        "availablequantity": "70k",
+        "minimumquantity": "100",
+        "availablequantity": "700",
         "img": "https://www.westerndigital.com/content/dam/store/en-us/assets/products/internal-storage/wd-green-ssd/gallery/120gb/wd-green-ssd-120gb-front.png"
     },
     {
-        "name": "HDD",
         "_id": 2,
+        "name": "HDD",
         "price": "$42",
         "description": "A computer hard disk drive (HDD) is a non-volatile data storage device. Non-volatile refers to storage devices that maintain stored data when turned off.",
-        "minimumquantity": "15k",
-        "availablequantity": "80k",
+        "minimumquantity": "150",
+        "availablequantity": "800",
         "img": "https://5.imimg.com/data5/CN/PK/QO/SELLER-19884238/segate-hard-disk-500x500.jpg"
     },
     {
-        "name": "RAM",
         "_id": 3,
+        "name": "RAM",
         "price": "$55",
         "description": "Random-access memory is a form of computer memory that can be read and changed in any order, typically used to store working data and machine code.",
-        "minimumquantity": "8k",
-        "availablequantity": "65k",
+        "minimumquantity": "80",
+        "availablequantity": "650",
         "img": "https://pricemama.com.bd/wp-content/uploads/2019/07/gskill-trident-z-rgb-8gb-ddr4-3200mhz-black-heatsink-gaming-desktop-ram.jpg"
     },
     {
-        "name": "RGB Cooler",
         "_id": 4,
+        "name": "RGB Cooler",
         "price": "$30",
         "description": "he RGB LED Controller together with Cooler Master software allows you to take full control of your rig's lighting and take it to the next level.",
-        "minimumquantity": "12k",
-        "availablequantity": "75k",
+        "minimumquantity": "120",
+        "availablequantity": "750",
         "img": "https://igadget.com.bd/wp-content/uploads/2021/08/lian-li-galahad-240mm-white-price-in-bd-500x500-1.jpg"
     },
     {
-        "name": "Power Supply",
         "_id": 5,
+        "name": "Power Supply",
         "price": "$40",
         "description": "The power supply unit or PSU for PC converts AC to low-voltage regulated DC power for the internal components of a computer. ",
-        "minimumquantity": "9k",
-        "availablequantity": "85k",
+        "minimumquantity": "150",
+        "availablequantity": "850",
         "img": "https://www.startech.com.bd/image/cache/catalog/power-supply/corsair/rm750/rm750-500x500.jpg"
     },
     {
-        "name": "CPU Casing",
         "_id": 6,
+        "name": "CPU Casing",
         "price": "$60",
         "description": "In the modern era, the casing is a very important element of desktop PC that is often known as case, chassis, tower, system unit, cabinet,, or base unit.",
-        "minimumquantity": "7k",
-        "availablequantity": "80k",
+        "minimumquantity": "200",
+        "availablequantity": "800",
         "img": "https://image.made-in-china.com/2f0j00WzuRpFSEqlgP/Hot-Computer-Cases-Gamer-Towers-ATX-CPU-Casing-PC-Case.jpg"
     }
 ]

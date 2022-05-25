@@ -1,18 +1,27 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 
 const Purchase = () => {
-    const { _id } = useParams()
+    const { id } = useParams()
     const [product, setProduct] = useState({})
 
+    const navigate = useNavigate()
+    const navigateToToolDetail = id => {
+        navigate(`/purchase/${id}`)
+    }
+
+    // const { name, img, price, minimumquantity,
+    //     availablequantity, description } = product
+
     useEffect(() => {
-        const url = `tools.json/purchase/${_id}`
+        const url = `http://localhost:5000/tool/${id}`
         fetch(url)
             .then(res => res.json())
             .then(data => {
                 setProduct(data)
             })
     }, [])
+
 
     return (
         <div className="card lg:max-w-lg bg-base-100 shadow-xl mt-20 hover:shadow-2xl mx-auto my-20">
@@ -26,7 +35,7 @@ const Purchase = () => {
                 <p>Price: {product?.price}</p>
                 <p>{product?.description}</p>
                 <div class="card-actions justify-end">
-                    <button class="btn btn-primary">Place Order</button>
+                    <button onClick={() => navigateToToolDetail(product?._id)} class="btn btn-primary">Place Order</button>
                 </div>
             </div>
         </div>

@@ -4,11 +4,10 @@ const useReview = () => {
     const [reviews, setReviews] = useState([])
     useEffect(() => {
 
-        fetch('https://boiling-badlands-76374.herokuapp.com/inventory')
+        fetch('http://localhost:5000/review')
             .then(res => res.json())
             .then(data => setReviews(data))
     }, [])
-
 
     return [reviews, setReviews]
 }

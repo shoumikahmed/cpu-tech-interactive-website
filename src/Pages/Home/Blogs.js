@@ -13,13 +13,13 @@ const Blogs = () => {
                     </p>
                     <p class='text-gray-600'>
                         I can improve the perfomance of a reacr application by doing these techniques which are:
-                        <ul>
-                            <li>1. Using React.Fragment to Avoid Adding Extra Nodes to the DOM.</li>
-                            <li>2. By Ignoring Anonymous Functions.</li>
-                            <li>3. Use A Production Build Before Deployment.</li>
-                            <li>4. By Mounting And Unmounting Components.</li>
-                            <li>5. Using React.memo for Component Memoization.</li>
-                        </ul>
+
+                        <li> Using React.Fragment to Avoid Adding Extra Nodes to the DOM.</li>
+                        <li> By Ignoring Anonymous Functions.</li>
+                        <li> Use A Production Build Before Deployment.</li>
+                        <li> By Mounting And Unmounting Components.</li>
+                        <li> Using React.memo for Component Memoization.</li>
+
                     </p>
 
                     <p class='mt-10 mb-3 font-semibold text-gray-900'>
@@ -27,12 +27,12 @@ const Blogs = () => {
                     </p>
                     <p class='text-gray-600'>
                         The different ways to manage state in a react application are:
-                        <ul>
-                            <li>1. Local state - Local state is data we manage in one or another component.</li>
-                            <li>2. Global state - Global state is data we manage across multiple components.</li>
-                            <li>3. Server state - Data that comes from an external server that must be integrated with our UI state.</li>
-                            <li>4. URL state - Data that exists on our URLs, including the pathname and query parameters.</li>
-                        </ul>
+
+                        <li> Local state - Local state is data we manage in one or another component.</li>
+                        <li> Global state - Global state is data we manage across multiple components.</li>
+                        <li> Server state - Data that comes from an external server that must be integrated with our UI state.</li>
+                        <li> URL state - Data that exists on our URLs, including the pathname and query parameters.</li>
+
                     </p>
                     <p class='mt-10 mb-3 font-semibold text-gray-900'>
                         How does prototypical inheritance work?

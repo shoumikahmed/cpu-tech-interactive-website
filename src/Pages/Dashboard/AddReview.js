@@ -10,13 +10,14 @@ const AddReview = () => {
         e.preventDefault()
         const review = {
             email: user?.email,
+            image: user?.photoURL,
             name: e.target.name.value,
             city: e.target.city.value,
             ratings: e.target.ratings.value,
             review: e.target.review.value,
         }
 
-        const url = ``
+        const url = `http://localhost:5000/review`
         fetch(url, {
             method: 'POST',
             headers: {
@@ -34,7 +35,7 @@ const AddReview = () => {
 
 
     return (
-        <div className='flex justify-center items-center mt-12'>
+        <div className='flex justify-center items-center mt-4'>
             <div className="card w-96 bg-base-100 shadow-xl">
                 <div className="card-body">
                     <h2 className="text-center text-2xl font-bold">Add Review</h2>
@@ -42,9 +43,11 @@ const AddReview = () => {
                     <form onSubmit={addReview}>
                         <div className="form-control w-full max-w-xs">
                             <label className="label">
-                                <span className="label-text">Name</span>
+                                <span className="label-text"></span>
                             </label>
                             <input
+                                disabled
+                                value={user?.displayName || ''}
                                 name="name"
                                 id="name"
                                 type="text"
@@ -55,7 +58,22 @@ const AddReview = () => {
                         </div>
                         <div className="form-control w-full max-w-xs">
                             <label className="label">
-                                <span className="label-text">City</span>
+                                <span className="label-text"></span>
+                            </label>
+                            <input
+                                disabled
+                                value={user?.email || ''}
+                                name="email"
+                                id="email"
+                                type="email"
+                                placeholder="Your Name"
+                                className="input input-bordered w-full max-w-xs"
+                            />
+
+                        </div>
+                        <div className="form-control w-full max-w-xs">
+                            <label className="label">
+                                <span className="label-text"></span>
                             </label>
                             <input
                                 name="city"
@@ -68,7 +86,22 @@ const AddReview = () => {
                         </div>
                         <div className="form-control w-full max-w-xs">
                             <label className="label">
-                                <span className="label-text">Ratings</span>
+                                <span className="label-text">Image</span>
+                            </label>
+                            <input
+                                disabled
+                                value={user?.photoURL || ''}
+                                name="image"
+                                id="image"
+                                type="text"
+                                placeholder="Image"
+                                className="input input-bordered w-full max-w-xs"
+                            />
+
+                        </div>
+                        <div className="form-control w-full max-w-xs">
+                            <label className="label">
+                                <span className="label-text"></span>
                             </label>
                             <input
                                 name="ratings"
@@ -81,9 +114,10 @@ const AddReview = () => {
                         </div>
                         <div className="form-control w-full max-w-xs">
                             <label className="label">
-                                <span className="label-text">Review</span>
+                                <span className="label-text"></span>
                             </label>
                             <textarea
+
                                 name="review"
                                 id="review"
                                 class="textarea textarea-bordered"
