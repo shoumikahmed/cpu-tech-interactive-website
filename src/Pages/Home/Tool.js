@@ -20,7 +20,10 @@ const Tool = ({ tool }) => {
                 <p>Price: {tool?.price}</p>
                 <p>{tool?.description}</p>
                 <div class="card-actions justify-end">
-                    <button onClick={() => navigateToPurchase(tool?._id)} class="btn btn-primary">Place Order</button>
+                    <button
+                        onClick={() => navigateToPurchase(tool?._id)}
+                        class="btn btn-primary"
+                    >Place Order</button>
                 </div>
             </div>
         </div>

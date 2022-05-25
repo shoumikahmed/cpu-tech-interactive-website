@@ -1,19 +1,18 @@
 import React, { useEffect, useState } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
+import { toast } from 'react-toastify';
+
 
 const Purchase = () => {
     const [user] = useAuthState(auth)
     const { id } = useParams()
     const [product, setProduct] = useState({})
 
-    const navigate = useNavigate()
-    const navigateToToolDetail = id => {
-        navigate(`/purchase/${id}`)
-    }
 
-    // const { name, img, price, minimumquantity,
+
+    // const { name, _id, img, price, minimumquantity,
     //     availablequantity, description } = product
 
     useEffect(() => {
@@ -24,6 +23,38 @@ const Purchase = () => {
                 setProduct(data)
             })
     }, [])
+
+    const handleOrder = event => {
+        event.preventDefault()
+
+        const order = {
+            name: event.target.name.value,
+            country: event.target.country.value,
+            email: event.target.email.value,
+            country: event.target.country.value,
+            address: event.target.address.value,
+            phone: event.target.phone.value
+        }
+
+        fetch('http://localhost:5000/order', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(order)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+                if (data.success) {
+                    toast('Order hase been placed')
+                }
+                else {
+                    toast.error('You have already placed the order')
+                }
+            })
+
+    }
 
 
     return (
@@ -47,7 +78,7 @@ const Purchase = () => {
                     <div className="card-body">
                         <h2 className="text-center text-2xl font-bold">Order Now</h2>
 
-                        <form>
+                        <form onSubmit={handleOrder}>
                             <div className="form-control w-full max-w-xs">
                                 <label className="label">
                                     <span className="label-text"></span>
