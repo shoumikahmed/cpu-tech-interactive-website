@@ -10,6 +10,10 @@ const Purchase = () => {
     const { id } = useParams()
     const [product, setProduct] = useState({})
 
+    const [inputValue, setInputValue] = useState(product?.minimumquantity);
+
+    console.log(product)
+
 
 
     // const { name, _id, img, price, minimumquantity,
@@ -31,7 +35,6 @@ const Purchase = () => {
             name: event.target.name.value,
             country: event.target.country.value,
             email: event.target.email.value,
-            country: event.target.country.value,
             address: event.target.address.value,
             phone: event.target.phone.value
         }
@@ -56,6 +59,17 @@ const Purchase = () => {
 
     }
 
+    const handleChange = event => {
+        setInputValue(event.target.quantity.value);
+      };
+
+    const handleQuantity = e => {
+        const quantity = e.target.quantity.value;
+        if (quantity > quantity.availablequantity) {
+            toast(`We have only ${quantity?.availablequantity}`)
+        }
+    }
+
 
     return (
         <section>
@@ -69,6 +83,16 @@ const Purchase = () => {
                     <p>Available quantity: {product?.availablequantity}</p>
                     <p>Price: {product?.price}</p>
                     <p>{product?.description}</p>
+                    <input
+
+                        value={product?.minimumquantity}
+                        name="quantity"
+                        type="number"
+                        placeholder="Quantity"
+                        className="input input-bordered w-full max-w-xs"
+                    />
+
+                    <button onClick={handleQuantity} className='btn btn-primary'>Purchase</button>
                 </div>
             </div>
 
@@ -85,14 +109,13 @@ const Purchase = () => {
                                 </label>
                                 <input
                                     disabled
-                                    value={user?.displayName || ''}
+                                    value={product?.name || ''}
                                     name="name"
                                     id="name"
                                     type="text"
                                     placeholder="Your Name"
                                     className="input input-bordered w-full max-w-xs"
                                 />
-
                             </div>
                             <div className="form-control w-full max-w-xs">
                                 <label className="label">
@@ -151,7 +174,7 @@ const Purchase = () => {
 
                             </div>
 
-                            <input className='btn w-full max-w-xs mt-5' type="submit" value="Order Now" />
+                            <input className='btn btn-primary w-full max-w-xs mt-5' type="submit" value="Order Now" />
                         </form>
                     </div>
                 </div>
