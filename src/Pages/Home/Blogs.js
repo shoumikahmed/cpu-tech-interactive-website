@@ -50,33 +50,20 @@ const Blogs = () => {
                         Advanced Questions
                     </h1>
                     <p class='mt-10 mb-3 font-semibold text-gray-900'>
-                        WAI-ARIA basics, WAI-ARIA basics, WAI-ARIA basics, WAI-ARIA basics?
+                        Why you do not set the state directly in React. For example, if you have const [products, setProducts] = useState([]). Why you do not set products = [...] instead, you use the setProducts
                     </p>
                     <p class='text-gray-600'>
-                        Following on from the previous article, sometimes making complex UI
-                        controls that involve unsemantic HTML and dynamic JavaScript-updated
-                        content can be difficult. WAI-ARIA is a technology that can help
-                        with such problems by adding in further semantics that browsers and
-                        assistive technologies can recognize and use to let users know what
-                        is going on. Here we'll show how to use it at a basic level to
-                        improve accessibility.
+
+                        I should never set the state directly because of the following reasons: 1) If I set it directly, calling the setState() afterward may just replace the set i made. 2) When i directly set the state, it does not change this.state immediately. Instead, it creates a pending state transition, and accessing it after calling this method will only return the present value. 3) I will lose control of the state across all components.
                     </p>
                     <p class='mt-10 mb-3 font-semibold text-gray-900'>
-                        Accessible multimedia?
+                        What is a unit test? Why should write unit tests?
                     </p>
                     <p class='text-gray-600'>
-                        Another category of content that can create accessibility problems
-                        is multimedia — video, audio, and image content need to be given
-                        proper textual alternatives, so they can be understood by assistive
-                        technologies and their users. This article shows how.
+
+                        Unit tests only test a single part of your implementation. A unit. No dependencies or integrations, no framework specifics. They're like a method that returns a link in a specific language.
                     </p>
-                    <p class='mt-10 mb-3 font-semibold text-gray-900'>
-                        Mobile accessibility?
-                    </p>
-                    <p class='text-gray-600'>
-                        With web access on mobile devices being so popular, and popular
-                        platforms such as iOS and Android.
-                    </p>
+
                 </div>
             </div>
         </section>

@@ -1,7 +1,9 @@
 import { signOut } from 'firebase/auth';
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
+import { useQuery } from 'react-query';
 import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import auth from '../../firebase.init';
 
 const MyOrders = () => {
@@ -30,10 +32,36 @@ const MyOrders = () => {
                 })
                 .then(data => {
                     setOrders(data)
+                    console.log(data)
 
                 })
         }
     }, [user])
+
+    const { data: products, isLoading, refetch } = useQuery('products', () => fetch(`http://localhost:5000/order`, {
+        headers: {
+            'content-type': 'application/json'
+            // authorization: Bearer ${localStorage.getItem('accessToken')}
+        }
+    }).then(res => res.json()));
+
+    const handleDelete = id => {
+        fetch(`http://localhost:5000/order/${id}`, {
+            method: 'DELETE',
+            headers: {
+                'content-type': 'application/json',
+                // authorization: Bearer ${ localStorage.getItem('accessToken') }
+            }
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                if (data.deletedCount) {
+                    toast.success('Product deleted successfully')
+                    refetch()
+                }
+            })
+    }
 
     return (
         <div>
@@ -47,7 +75,7 @@ const MyOrders = () => {
                             <th>Name</th>
                             <th>Order Quantity</th>
                             <th>Payment</th>
-                            <th>Cancel Order</th>
+                            <th>Delete Order</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -59,6 +87,7 @@ const MyOrders = () => {
                                 <td>{order.name}</td>
                                 <td>{order.email}</td>
                                 <td>{order.phone}</td>
+                                <td><button onClick={handleDelete} className='btn btn-xs'>Delete</button></td>
                             </tr>)
                         }
 

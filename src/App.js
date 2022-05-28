@@ -17,6 +17,9 @@ import Blogs from './Pages/Home/Blogs';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import MakeAdmin from './Pages/Dashboard/MakeAdmin';
+import ManageOrders from './Pages/Dashboard/ManageOrders';
+import AddProduct from './Pages/Dashboard/AddProduct';
+import ManageProduct from './Pages/Dashboard/ManageProduct';
 
 function App() {
   return (
@@ -40,6 +43,9 @@ function App() {
           <Route path='myorders' element={<RequireAuth><MyOrders></MyOrders></RequireAuth>}></Route>
           <Route path='addreview' element={<RequireAuth><AddReview></AddReview></RequireAuth>}></Route>
           <Route path='admin' element={<RequireAuth><MakeAdmin></MakeAdmin></RequireAuth>}></Route>
+          <Route path='manageorders' element={<RequireAuth><ManageOrders></ManageOrders></RequireAuth>}></Route>
+          <Route path='addproduct' element={<RequireAuth><AddProduct></AddProduct></RequireAuth>}></Route>
+          <Route path='manageproduct' element={<RequireAuth><ManageProduct></ManageProduct></RequireAuth>}></Route>
         </Route>
 
         <Route path='*' element={<NotFound></NotFound>}></Route>

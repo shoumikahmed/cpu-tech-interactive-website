@@ -10,9 +10,36 @@ const Purchase = () => {
     const { id } = useParams()
     const [product, setProduct] = useState({})
 
-    const [inputValue, setInputValue] = useState(product?.minimumquantity);
+    const { price, name, minimumquantity, availablequantity, description, img } = product
+    const [orderQuanty, setOrderQnty] = useState(minimumquantity)
+    let availableQnty = Number(availablequantity)
+
 
     console.log(product)
+
+
+
+    const parsesQuantity = e => {
+        e.preventDefault()
+
+        const parcesQuantityUpdate = Number(e.target.orderQuantity.value)
+        if (parcesQuantityUpdate > availableQnty) {
+            toast.warning(`We Have No ${parcesQuantityUpdate} Piece.We Have Only ${availableQnty}`)
+
+        }
+        else if (parcesQuantityUpdate < minimumquantity) {
+            toast.warning(`Minimum Order Quantity is ${minimumquantity}`)
+        }
+        else {
+            setOrderQnty(parcesQuantityUpdate)
+            window.scroll({
+                top: 1000,
+                behavior: 'smooth'
+
+            });
+        }
+    }
+
 
 
 
@@ -33,6 +60,7 @@ const Purchase = () => {
 
         const order = {
             name: event.target.name.value,
+            minimumquantity: event.target.minimumquantity.value,
             country: event.target.country.value,
             email: event.target.email.value,
             address: event.target.address.value,
@@ -59,20 +87,18 @@ const Purchase = () => {
 
     }
 
-    const handleChange = event => {
-        setInputValue(event.target.quantity.value);
-      };
 
-    const handleQuantity = e => {
-        const quantity = e.target.quantity.value;
-        if (quantity > quantity.availablequantity) {
-            toast(`We have only ${quantity?.availablequantity}`)
-        }
-    }
+
+    // const handleQuantity = e => {
+    //     const quantity = e.target.quantity.value;
+    //     if (quantity > quantity.availablequantity) {
+    //         toast(`We have only ${quantity?.availablequantity}`)
+    //     }
+    // }
 
 
     return (
-        <section>
+        <section className='flex justify-center items-center'>
             <div className="card w-96 lg:max-w-lg bg-base-100 shadow-xl mt-20 hover:shadow-2xl mx-auto my-20">
                 <figure className='px-10 pt-10'>
                     <img src={product?.img} alt="" />
@@ -83,16 +109,10 @@ const Purchase = () => {
                     <p>Available quantity: {product?.availablequantity}</p>
                     <p>Price: {product?.price}</p>
                     <p>{product?.description}</p>
-                    <input
-
-                        value={product?.minimumquantity}
-                        name="quantity"
-                        type="number"
-                        placeholder="Quantity"
-                        className="input input-bordered w-full max-w-xs"
-                    />
-
-                    <button onClick={handleQuantity} className='btn btn-primary'>Purchase</button>
+                    <form className='md:flex' onSubmit={parsesQuantity}>
+                        <input defaultValue={minimumquantity} name='orderQuantity' className='w-2/4 px-6 py-2 border border-primary rounded mt-1' type="text" placeholder='Add Quantity' />
+                        <button class="btn btn-sm ml-8 btn-primary">Purchase</button>
+                    </form>
                 </div>
             </div>
 
@@ -128,6 +148,19 @@ const Purchase = () => {
                                     id="email"
                                     type="email"
                                     placeholder="Your Name"
+                                    className="input input-bordered w-full max-w-xs"
+                                />
+
+                            </div>
+                            <div className="form-control w-full max-w-xs">
+                                <label className="label">
+                                    <span className="label-text"></span>
+                                </label>
+                                <input
+                                    name="minimumquantity"
+                                    id="minimumquantity"
+                                    type="text"
+                                    placeholder="Minimumquantity"
                                     className="input input-bordered w-full max-w-xs"
                                 />
 
