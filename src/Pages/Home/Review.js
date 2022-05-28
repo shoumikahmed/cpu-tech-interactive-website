@@ -5,7 +5,7 @@ const Review = ({ review }) => {
     return (
         <div className="card lg:max-w-lg bg-base-100 shadow-xl mt-20 hover:shadow-lg">
             <div className="card-body">
-                <p><strong>Review: {review?.review}</strong></p>
+                <p className='text-slate-600'><strong>Review: {review?.review}</strong></p>
                 <div className=" flex items-center">
                     <div className="avatar">
                         <div className="w-16 mt-8 rounded-full ring ring-primary ring-offset-base-100 mr-5">

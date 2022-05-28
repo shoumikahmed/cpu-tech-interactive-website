@@ -107,7 +107,7 @@ const AddReview = () => {
                             <input
                                 name="ratings"
                                 id="ratings"
-                                type="number"
+                                type="text"
                                 placeholder="Ratings"
                                 className="input input-bordered w-full max-w-xs"
                             />

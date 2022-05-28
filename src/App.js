@@ -16,6 +16,7 @@ import MyProfile from './Pages/Dashboard/MyProfile';
 import Blogs from './Pages/Home/Blogs';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import MakeAdmin from './Pages/Dashboard/MakeAdmin';
 
 function App() {
   return (
@@ -34,17 +35,11 @@ function App() {
           </RequireAuth>
         }></Route>
 
-        <Route path="dashboard" element={<RequireAuth>
-          <Dashboard />
-        </RequireAuth>} >
-          <Route index element={<RequireAuth>
-            <MyOrders></MyOrders>
-          </RequireAuth>}></Route>
-          <Route path='addreview' element={<RequireAuth>
-            <AddReview></AddReview>
-          </RequireAuth>}></Route>
-          <Route path='myprofile' element={<MyProfile></MyProfile>}></Route>
-
+        <Route path="dashboard" element={<RequireAuth><Dashboard /></RequireAuth>} >
+          <Route index element={<MyProfile></MyProfile>}></Route>
+          <Route path='myorders' element={<RequireAuth><MyOrders></MyOrders></RequireAuth>}></Route>
+          <Route path='addreview' element={<RequireAuth><AddReview></AddReview></RequireAuth>}></Route>
+          <Route path='admin' element={<RequireAuth><MakeAdmin></MakeAdmin></RequireAuth>}></Route>
         </Route>
 
         <Route path='*' element={<NotFound></NotFound>}></Route>
