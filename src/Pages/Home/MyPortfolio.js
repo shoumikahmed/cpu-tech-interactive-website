@@ -23,7 +23,7 @@ const MyPortfolio = () => {
                 <div class="card-actions justify-center">
                     <a href="https://sa-photography-assignment10.web.app/"><button class="btn btn-primary">SA Photography</button></a>
                     <a href="https://bike-stock-assignment11.web.app/"><button class="btn btn-primary">Bike Stocker</button></a>
-                    <a href="https://sa-photography-assignment10.web.app/"><button class="btn btn-primary">SA Photography</button></a>
+                    <a href="https://cpu-manufacturer-assignm-47d23.web.app/"><button class="btn btn-primary">Cpu Tech</button></a>
                 </div>
             </div>
         </div>
