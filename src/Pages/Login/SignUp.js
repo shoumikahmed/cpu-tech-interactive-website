@@ -25,14 +25,6 @@ const SignUp = () => {
 
     let signInError;
 
-    let location = useLocation();
-    let from = location.state?.from?.pathname || "/";
-
-    useEffect(() => {
-        if (token) {
-            navigate(from, { replace: true });
-        }
-    }, [token, from, navigate])
 
     if (loading || gLoading || updating) {
         return <Loading></Loading>
