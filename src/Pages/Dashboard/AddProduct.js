@@ -55,9 +55,9 @@ const AddProduct = () => {
     }
 
     return (
-        <div>
+        <div className='flex justify-center items-center mt-6'>
             <div className='mt-6 md:ml-16'>
-                <div className="card w-96 bg-primary text-neutral-content">
+                <div className="card w-96 bg-secondary ">
                     <div className="card-body items-center text-center">
                         <h2 className="card-title"> Add Product </h2>
 
@@ -91,7 +91,7 @@ const AddProduct = () => {
 
                                     type="number" placeholder="Maximum Quantity" className="input input-bordered w-full max-w-xs" />
                                 <label className="label">
-                                    {errors.maxQuantity?.type === 'required' && <span className="label-text-alt text-red-500 font-medium">{errors.maxQuantity.message}</span>}
+                                    {errors.availablequantity?.type === 'required' && <span className="label-text-alt text-red-500 font-medium">{errors.availablequantity.message}</span>}
                                 </label>
                             </div>
 
@@ -108,7 +108,7 @@ const AddProduct = () => {
 
                                     type="number" placeholder="Minimum Quantity" className="input input-bordered w-full max-w-xs" />
                                 <label className="label">
-                                    {errors.minQuantity?.type === 'required' && <span className="label-text-alt text-red-500 font-medium">{errors.minQuantity.message}</span>}
+                                    {errors.minimumquantity?.type === 'required' && <span className="label-text-alt text-red-500 font-medium">{errors.minimumquantity.message}</span>}
                                 </label>
                             </div>
 
@@ -134,7 +134,7 @@ const AddProduct = () => {
 
                             <div className="form-control w-full max-w-xs">
                                 <input
-                                    {...register("des", {
+                                    {...register("description", {
                                         required: {
                                             value: true,
                                             message: 'Description is Required'
@@ -143,7 +143,7 @@ const AddProduct = () => {
 
                                     type="text" placeholder="Product Description" className="input input-bordered w-full max-w-xs" />
                                 <label className="label">
-                                    {errors.name?.type === 'required' && <span className="label-text-alt text-red-500 font-medium">{errors.name.message}</span>}
+                                    {errors.description?.type === 'required' && <span className="label-text-alt text-red-500 font-medium">{errors.description.message}</span>}
                                 </label>
                             </div>
 

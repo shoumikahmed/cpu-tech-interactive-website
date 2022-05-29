@@ -14,7 +14,7 @@ const ManageOrders = () => {
         <div>
 
 
-            <div className="overflow-x-auto">
+            <div className="overflow-x-auto p-5">
                 <table className="table w-full">
 
                     <thead>
@@ -37,9 +37,7 @@ const ManageOrders = () => {
                                 <td>{order.email}</td>
                                 <td>{order.phone}</td>
                                 <td>{order.country}</td>
-                                {/* <td><button className="btn btn-xs">Paid</button>
-         <button className="btn btn-xs ml-2">cencle</button>
-         </td> */}
+
                             </tr>)
                         }
 
