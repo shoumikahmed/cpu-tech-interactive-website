@@ -4,6 +4,9 @@ const useToken = user => {
     const [token, setToken] = useState('')
     useEffect(() => {
 
+        console.log('inside token')
+        console.log(user)
+
         const email = user?.user?.email
         const currentUser = { email: email }
 

@@ -98,8 +98,8 @@ const Purchase = () => {
 
 
     return (
-        <section className='flex justify-center items-center'>
-            <div className="card w-96 lg:max-w-lg bg-base-100 shadow-xl mt-20 hover:shadow-2xl mx-auto my-20">
+        <section className='md:flex justify-center items-center md:gap-20'>
+            <div className="card w-96 lg:max-w-lg bg-base-100 shadow-xl mt-20 hover:shadow-2xl  my-20">
                 <figure className='px-10 pt-10'>
                     <img src={product?.img} alt="" />
                 </figure>

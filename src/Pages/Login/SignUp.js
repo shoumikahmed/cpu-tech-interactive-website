@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useCreateUserWithEmailAndPassword, useSignInWithGoogle, useUpdateProfile } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import { useForm } from "react-hook-form";
 import Loading from '../Shared/Loading';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import useToken from '../../hooks/useToken';
 
 const SignUp = () => {
@@ -18,11 +18,21 @@ const SignUp = () => {
     ] = useCreateUserWithEmailAndPassword(auth);
     const [updateProfile, updating, updateError] = useUpdateProfile(auth);
 
+    console.log(user)
     const [token] = useToken(user || gUser)
 
     const navigate = useNavigate()
 
     let signInError;
+
+    let location = useLocation();
+    let from = location.state?.from?.pathname || "/";
+
+    useEffect(() => {
+        if (token) {
+            navigate(from, { replace: true });
+        }
+    }, [token, from, navigate])
 
     if (loading || gLoading || updating) {
         return <Loading></Loading>
@@ -31,6 +41,8 @@ const SignUp = () => {
     if (error || gError || updateError) {
         signInError = <p className='text-red-500'>{error?.message || gError?.message || updateError?.message}</p>
     }
+
+
 
     if (token) {
         navigate('/')
@@ -48,7 +60,7 @@ const SignUp = () => {
                 <div className="card-body">
                     <h2 className="text-center text-2xl font-bold">Sign Up</h2>
 
-                    <form onSubmit={() => handleSubmit(onSubmit)}>
+                    <form onSubmit={handleSubmit(onSubmit)}>
 
 
                         <div className="form-control w-full max-w-xs">
