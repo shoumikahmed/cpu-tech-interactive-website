@@ -6,7 +6,7 @@ import Tool from './Tool';
 const Tools = () => {
     // const [tools, setTools] = useState([])
 
-    const { data: tools, isLoading, refetch } = useQuery(['available',], () => fetch(`http://localhost:5000/tool`)
+    const { data: tools, isLoading, refetch } = useQuery(['available',], () => fetch(`https://secret-atoll-95984.herokuapp.com/tool`)
         .then(res => res.json()))
 
     if (isLoading) {
@@ -14,7 +14,7 @@ const Tools = () => {
     }
 
     // useEffect(() => {
-    //     fetch('http://localhost:5000/tool')
+    //     fetch('https://secret-atoll-95984.herokuapp.com/tool')
     //         .then(res => res.json())
     //         .then(data => setTools(data))
     // }, [])

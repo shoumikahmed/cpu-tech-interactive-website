@@ -47,7 +47,7 @@ const Purchase = () => {
     //     availablequantity, description } = product
 
     useEffect(() => {
-        const url = `http://localhost:5000/tool/${id}`
+        const url = `https://secret-atoll-95984.herokuapp.com/tool/${id}`
         fetch(url)
             .then(res => res.json())
             .then(data => {
@@ -67,7 +67,7 @@ const Purchase = () => {
             phone: event.target.phone.value
         }
 
-        fetch('http://localhost:5000/order', {
+        fetch('https://secret-atoll-95984.herokuapp.com/order', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

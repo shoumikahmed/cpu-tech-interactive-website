@@ -7,14 +7,14 @@ const ManageProduct = () => {
 
     const [deleteProduct, setDeleteProduct] = useState(null)
 
-    const { data: products, isLoading, refetch } = useQuery('products', () => fetch('http://localhost:5000/tool').then(res => res.json()));
+    const { data: products, isLoading, refetch } = useQuery('products', () => fetch('https://secret-atoll-95984.herokuapp.com/tool').then(res => res.json()));
 
     if (isLoading) {
         return <Loading></Loading>
     }
 
     const handleDelete = id => {
-        fetch(`http://localhost:5000/tool/${id}`, {
+        fetch(`https://secret-atoll-95984.herokuapp.com/tool/${id}`, {
             method: 'DELETE',
             headers: {
                 'content-type': 'application/json',

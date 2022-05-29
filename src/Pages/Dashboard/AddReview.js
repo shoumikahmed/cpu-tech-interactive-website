@@ -17,7 +17,7 @@ const AddReview = () => {
             review: e.target.review.value,
         }
 
-        const url = `http://localhost:5000/review`
+        const url = `https://secret-atoll-95984.herokuapp.com/review`
         fetch(url, {
             method: 'POST',
             headers: {
